@@ -24,7 +24,6 @@ vm.args
 .psql_history
 docker-resources/Dockerfile
 docker-resources/Caddyfile
-docker-compose.override.yml
 pgdata
 
 # Prevent committing custom emojis
