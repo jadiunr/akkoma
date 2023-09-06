@@ -9,7 +9,12 @@ services:
     ports:
     - 443:443
     - 80:80
+    - 127.0.0.1:2019:2019
     volumes:
       - ./docker-resources/Caddyfile:/etc/caddy/Caddyfile
       - ./caddy-data:/data
       - ./caddy-config:/config
+  db:
+    command: postgres -c logging_collector=on -c log_file_mode=0640
+    ports:
+    - 127.0.0.1:5432:5432
